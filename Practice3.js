@@ -26,7 +26,10 @@ const personalMovieDB={
     movies:{},
     actors:{},
     genres:[],
-    privat:false
+    privat:false,
+    startt:function (){
+      
+    }
 };
 
 // Вывод функции задания 2 
@@ -54,7 +57,7 @@ if (personalMovieDB.count < 10 && personalMovieDB.count > 0){
 
 function rememberMyFilims(){
    for (let i = 0; i<2; i++){
-      const a = prompt("Один из последних просмотреных фильмов"),
+      const a = prompt("Один из последних просмотреных фильмов").trim(),
       b = prompt("На сколько оцените его?");
       personalMovieDB.movies[a] = b;
       if (a !=null && b!=null && a!="" && b!="" && a.length<50  && b.length<50 ){
